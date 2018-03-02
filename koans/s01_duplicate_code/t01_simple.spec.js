@@ -5,11 +5,11 @@ const greetMike = code.greetMike;
 const greetMaria = code.greetMaria;
 
 describe('01 - simple', () => {
-    it('greets maria', () => {
+    it('greets Maria', () => {
         expect(greetMaria()).to.eq('Hello Maria');
     });
 
-    it('greets maria', () => {
+    it('greets Mike', () => {
         expect(greetMike()).to.eq('Hello Mike');
     });
 
