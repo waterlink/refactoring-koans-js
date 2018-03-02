@@ -1,8 +1,9 @@
-const {describe, it} = require('mocha');
-const {expect} = require('chai');
+module.exports = {
+    greetMaria() {
+        return 'Hello Maria';
+    },
 
-describe('01 - simple', () => {
-    it('works', () => {
-        expect(2 + 2).to.eq(4);
-    });
-});
+    greetMike() {
+        return 'Hello Mike';
+    }
+};
