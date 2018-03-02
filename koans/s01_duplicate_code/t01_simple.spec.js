@@ -26,4 +26,23 @@ describe('01 - simple', () => {
             expect(greetMike.toString()).to.not.include('Hello');
         });
     });
+
+    xdescribe('extract duplication as a function', () => {
+        it('is extracted as function greetPerson', () => {
+            expect(code['greetByName']('Name')).to.eq('Hello Name');
+            expect(code['greetByName']('Other')).to.eq('Hello Other');
+        });
+
+        it('is used by greetMaria', () => {
+            expect(greetMaria.toString()).to.include('return code.greetByName(');
+        });
+
+        it('is used by greetMike', () => {
+            expect(greetMike.toString()).to.include('return code.greetByName(');
+        });
+
+        it('is still using greeting field', () => {
+            expect(code['greetByName'].toString()).to.not.include('Hello');
+        });
+    });
 });
