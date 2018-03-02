@@ -1,6 +1,6 @@
 const {expect} = require('chai');
 
-const code = require('./t01_simple');
+const code = require('./t01_simple_greet');
 const greetMike = code.greetMike;
 const greetMaria = code.greetMaria;
 
