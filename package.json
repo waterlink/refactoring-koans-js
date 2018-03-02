@@ -4,9 +4,9 @@
   "description": "Refactoring Koans to help you learn to refactor code smells in javascript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --watch --bail koans/**/*.spec.js"
   },
-  "author": "",
+  "author": "Oleksii Fedorov",
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.1.2",
