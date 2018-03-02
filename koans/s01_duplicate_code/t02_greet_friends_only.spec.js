@@ -16,27 +16,27 @@ describe('02 - greet friends only', () => {
         expect(greet('Sam')).to.eq('');
     });
 
-    describe('use name parameter instead of hard-coding', () => {
+    xdescribe('use name parameter instead of hard-coding', () => {
         it('does not hard-code greeting to Amy or Bob', () => {
             expect(greet.toString()).to.not.include('Hello Amy');
             expect(greet.toString()).to.not.include('Hello Bob');
         });
     });
 
-    describe('extract method for duplicated if body', () => {
+    xdescribe('extract method for duplicated if body', () => {
         it('uses greetByName method instead of duplicating', () => {
             expect(greet.toString()).to.not.include('`Hello ${name}!`');
             expect(greet.toString()).to.include('return code.greetByName(name)');
         });
     });
 
-    describe('consolidate conditional expression', () => {
+    xdescribe('consolidate conditional expression', () => {
         it('has only single if statement', () => {
             expect(greet.toString().match(/if/g)).to.have.length(1);
         });
     });
 
-    describe('extract condition as a method', () => {
+    xdescribe('extract condition as a method', () => {
         it('has method isFriend', () => {
             expect(code['isFriend']('Amy')).to.eq(true);
             expect(code['isFriend']('Bob')).to.eq(true);
@@ -50,7 +50,7 @@ describe('02 - greet friends only', () => {
         });
     });
 
-    describe('use appropriate data structure', () => {
+    xdescribe('use appropriate data structure', () => {
         it('has field friends', () => {
             expect(code['friends']).to.deep.eq(['Amy', 'Bob']);
         });
