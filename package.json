@@ -1,0 +1,11 @@
+{
+  "name": "refactoring-koans",
+  "version": "1.0.0",
+  "description": "Refactoring Koans to help you learn to refactor code smells in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
