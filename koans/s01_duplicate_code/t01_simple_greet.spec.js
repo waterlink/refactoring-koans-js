@@ -4,7 +4,7 @@ const code = require('./t01_simple_greet');
 const greetMike = code.greetMike;
 const greetMaria = code.greetMaria;
 
-describe('01 - simple', () => {
+describe('01 - simple greet', () => {
     it('greets Maria', () => {
         expect(greetMaria()).to.eq('Hello Maria');
     });
