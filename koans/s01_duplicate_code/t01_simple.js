@@ -1,4 +1,4 @@
-module.exports = {
+const code = {
     greetMaria() {
         return 'Hello Maria';
     },
@@ -7,3 +7,5 @@ module.exports = {
         return 'Hello Mike';
     }
 };
+
+module.exports = code;

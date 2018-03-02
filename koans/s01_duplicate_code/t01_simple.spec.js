@@ -1,4 +1,3 @@
-const {describe, it} = require('mocha');
 const {expect} = require('chai');
 
 const code = require('./t01_simple');
@@ -14,9 +13,17 @@ describe('01 - simple', () => {
         expect(greetMike()).to.eq('Hello Mike');
     });
 
-    describe('extract magic string duplication', () => {
-        it('is extracted', () => {
+    xdescribe('extract magic string duplication', () => {
+        it('is extracted as field greeting', () => {
             expect(code['greeting']).to.eq('Hello');
+        });
+
+        it('is not mentioned in greetMaria', () => {
+            expect(greetMaria.toString()).to.not.include('Hello');
+        });
+
+        it('is not mentioned in greetMike', () => {
+            expect(greetMike.toString()).to.not.include('Hello');
         });
     });
 });
